@@ -1,0 +1,22 @@
+name: flutter_app_beispiel
+description: Beispiel Applikation für Code Snippets zur Studienarbeit.
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.0
+  english_words: ^3.1.0
+  rxdart: ^0.16.6
+  http: ^0.11.3+16
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - res/img/AppLandScape_bw.png

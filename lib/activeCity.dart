@@ -16,8 +16,6 @@ class ActiveCity extends StatefulWidget {
 class ActiveCityState extends State<ActiveCity> {
 
   CityData     _activeCity;
-  bool         _useImperial;
-
 
   // constructor
   ActiveCityState() {
@@ -175,7 +173,7 @@ class ActiveCityState extends State<ActiveCity> {
         ),
         new Center(
           child: new Text(
-            (_useImperial ? activeCity.weather.tempF.round().toString() : activeCity.weather.tempC.round().toString()) + '°',
+            (activeCity.weather.tempC.round().toString()) + '°',
             style: new TextStyle(
               color: Colors.white,
               fontSize: 80.0,
@@ -184,7 +182,7 @@ class ActiveCityState extends State<ActiveCity> {
         ),
         new Center(
             child: new Text(
-              'Feels like ' + ( _useImperial ? activeCity.weather.feelsLikeF.round().toString() : activeCity.weather.feelsLikeC.round().toString()) + '°',
+              'Feels like ' + (activeCity.weather.feelsLikeC.round().toString()) + '°',
               style: new TextStyle(
                 color: Colors.white,
                 fontSize: 17.5,
@@ -260,7 +258,7 @@ class ActiveCityState extends State<ActiveCity> {
                         new Expanded(
                             child: new Align(
                               child: new Text(
-                                  _useImperial ? activeCity.weather.windMph.toString() + ' mph' : activeCity.weather.windKph.toString() + ' kph',
+                                  activeCity.weather.windKph.toString() + ' kph',
                                   style: _getBottomTextStyle()
                               ),
                               alignment: Alignment.centerRight,
